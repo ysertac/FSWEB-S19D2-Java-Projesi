@@ -22,11 +22,13 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
  * Spring Boot Security ile yapılabilen security türlerini tanımak ve uygulamak
  
  ### Görev 1
- * main metodunuzun olduğu paket altında ```controller```, ```config```, ```entity```, ```dao``` isminde 4 adet daha paket oluşturunuz.
+ * main metodunuzun olduğu paket altında ```controller```, ```config```, ```entity```, ```dao```, ```service``` isminde 5 adet daha paket oluşturunuz.
  * Project Lombok'u dependency olarak uygulamanıza ekleyin.
- * ```entity``` paketinin altına JDBCAuthentication için ```Member``` adında bir sınıf tanımlayınız. İçerisinde instance variable olarak ```id, email, password, role``` isminde 4 tane değişken oluşturun.
+ * ```entity``` paketinin altına JDBCAuthentication için ```Member``` adında bir sınıf tanımlayınız. İçerisinde instance variable olarak ```id, email, password``` isminde 3 tane değişken oluşturun.
+ * ```entity``` paketinin altına JDBCAuthentication için ```Role``` adında bir sınıf oluşturunuz içerisine ```id, authırity``` adında 2 field ekleyiniz.
+ * Member ve Role arasında many-to-many bir ilişki tanımlamalısınız.
  * ```entity``` paketinin altına JDBCAuthentication için ```Account``` adında bir sınıf tanımlayınız. İçerisinde instance variable olarak ```id, name``` isminde 2 tane değişken oluşturun.
- * ```dao``` paketinin altına ```CustomerRepository``` adinda bir metod tanımlayınız. İçerisinde emaile göre kullanıcıları almalı.
+ * ```dao``` paketinin altına ```MemberRepository``` adinda bir interface tanımlayınız. İçerisinde emaile göre kullanıcıları almalı.
  * Lombok ve JPA annotation larını uygulayarak bütün sınıfı bir veritabanı tablosu olucak şekilde işaretleyiniz.
  * ```application.properties``` dosyanızı kullanarak veritabanı bağlantınızı kurun.
  * Spring uygulamasının veritabanı loglarını açarak veritabanına yolladığınız her sorguyu inceleyin.
@@ -55,5 +57,4 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
  * [POST]/workintech/auth/register => member tablosunda yeni bir kullanıcı oluşturmalı.
  * [GET] requestlerine ```user ve admin``` rolündeki kullanıcılar request atabilmeli.
  * [POST], [PUT], [DELETE] requestlerine sadece ```admin``` rolündeki kullanıcılar request atabilir.
- * OAuth2 yöntemini kullanarak Github ile uygulamanızdaki endpointlere ulaşmayı deneyiniz.
- * OAuth2 yöntemini kullanarak Google ile uygulamanızdaki endpointlere ulaşmayı deneyiniz.
+ * OAuth2 yöntemini kullanarak Github ile uygulamanızdaki [GET]endpointlerine ulaşmayı deneyiniz.
