@@ -25,7 +25,7 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
  * main metodunuzun olduğu paket altında ```controller```, ```config```, ```entity```, ```dao```, ```service``` isminde 5 adet daha paket oluşturunuz.
  * Project Lombok'u dependency olarak uygulamanıza ekleyin.
  * ```entity``` paketinin altına JDBCAuthentication için ```Member``` adında bir sınıf tanımlayınız. İçerisinde instance variable olarak ```id, email, password``` isminde 3 tane değişken oluşturun.
- * ```entity``` paketinin altına JDBCAuthentication için ```Role``` adında bir sınıf oluşturunuz içerisine ```id, authırity``` adında 2 field ekleyiniz.
+ * ```entity``` paketinin altına JDBCAuthentication için ```Role``` adında bir sınıf oluşturunuz içerisine ```id, authority``` adında 2 field ekleyiniz.
  * Member ve Role arasında many-to-many bir ilişki tanımlamalısınız.
  * ```entity``` paketinin altına JDBCAuthentication için ```Account``` adında bir sınıf tanımlayınız. İçerisinde instance variable olarak ```id, name``` isminde 2 tane değişken oluşturun.
  * ```dao``` paketinin altına ```MemberRepository``` adinda bir interface tanımlayınız. İçerisinde emaile göre kullanıcıları almalı.
